@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contato</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="curriculo.html">Currículo</a></li>
+                <li><a href="github.html">GitHub</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="container">
+        <h1 class="section-title">Contato</h1>
+        
+        <p>Se você deseja entrar em contato comigo, preencha o formulário abaixo e ficarei feliz em responder suas perguntas ou comentários.</p>
+        
+        <form id="contact-form" action="#" method="post">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <span>
+            <p id="success-message" class="hidden">Mensagem enviada com sucesso!</p>
+        </span>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Rodrigo Garcia Lopes de Salles</p>
+    </footer>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Simulação de envio bem-sucedido do formulário
+            document.getElementById("success-message").classList.remove("hidden");
+            
+            // Limpar os campos de texto após o envio
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        });
+    </script>
+    
+</body>
+</html>
